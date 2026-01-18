@@ -66,22 +66,26 @@ body {
 }
 
 /* ===========================
-   PROGETTI — CARD A TUTTA PAGINA
+   PROGETTI — TITOLO IN ALTO + PULSANTE CENTRATO
 =========================== */
 .projects {
-    height: 100vh;                /* prende tutta la pagina */
+    height: 100vh;                
     display: flex;
-    justify-content: center;
+    flex-direction: column;       /* titolo in alto, contenuto sotto */
+    justify-content: flex-start;  /* titolo in alto */
     align-items: center;
     text-align: center;
+    padding-top: 60px;            /* spazio per il titolo */
     position: relative;
-    z-index: 10;                  /* sopra la hero */
+    z-index: 10;
 }
 
-/* wrapper interno */
+/* wrapper interno per centrare il pulsante */
 .projects-inner {
+    flex: 1;                      /* occupa tutto lo spazio rimanente */
     display: flex;
     flex-direction: column;
+    justify-content: center;      /* centra verticalmente il pulsante */
     align-items: center;
     gap: 25px;
 }
@@ -89,7 +93,7 @@ body {
 /* titolo */
 .projects h2 {
     font-size: 2.4rem;
-    margin: 0;
+    margin: 0 0 40px 0;
     color: #e8fbff;
 }
 
