@@ -12,8 +12,6 @@ body {
     display: flex;
     align-items: center;
     padding-left: 5vw;
-    position: relative;
-    z-index: 1;
 }
 
 .hero-content {
