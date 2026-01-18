@@ -1,16 +1,12 @@
-function revealOnScroll() {
-    const reveals = document.querySelectorAll('.reveal');
+function revealCard() {
+    const card = document.querySelector('.slide-card');
+    const windowHeight = window.innerHeight;
+    const elementTop = card.getBoundingClientRect().top;
 
-    for (let el of reveals) {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-        const revealPoint = 120;
-
-        if (elementTop < windowHeight - revealPoint) {
-            el.classList.add('active');
-        }
+    if (elementTop < windowHeight - 100) {
+        card.classList.add('active');
     }
 }
 
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
+window.addEventListener('scroll', revealCard);
+window.addEventListener('load', revealCard);
